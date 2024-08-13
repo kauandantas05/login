@@ -1,0 +1,280 @@
+:root {
+    --faixaHead-bg-color: linear-gradient(90deg, #F2521E 0%, #F2521E 106.39%);
+    /* --faixaHead-bg-color: radial-gradient(111.41% 70.52% at 68.01% 50%, #87F1FF 0%, #00B2FF 44.58%, #1235ED 100%); */
+    --body-bg-color: #232643;
+    
+    --card-bg-color: #0500827;
+
+    --text-primary-color: #82848a;
+    --text-secondary-color: #FFFFFF;
+
+    --button-primary-bg: radial-gradient(111.41% 70.52% at 68.01% 50%, #F2521E 0%, #F2521E 44.58%, #F2521E 100%);
+
+    --button-primary-hover-bg: #232643;
+    --button-primary-text: #f2521e;
+
+    --input-bg-color: #050827;
+    --input-text-color: #ffffff;
+    --input-focus-border: #FFFFFF;
+
+    --terms-color: #FFFFFF;
+
+    --checkmark-bg: #F2521E;
+    --checkmark-checked-bg: #FFFFFF;
+    --checkmark-border: #00071a;
+    --esqueci-minha-senha-color: #F2521E;
+}
+
+@font-face {
+    font-family: MundialBold;
+    src: url('./src/font/MundialBold.otf');
+}
+
+@font-face {
+    font-family: MundialRegular;
+    src: url('./src/font/MundialRegular.otf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('./src/font/Poppins-Medium.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--body-bg-color);
+    font-family: MundialRegular, sans-serif;
+}
+
+section.faixaHead {
+    background: var(--faixaHead-bg-color);
+    height: 15vh;
+    min-height: 8rem;
+}
+
+.logoBemVindo {
+    @media screen and (max-width:768px) {
+        text-align: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.logoBemVindo svg {
+    width: 12rem;
+}
+
+.logoBemVindo h2 {
+    color: var(--text-primary-color);
+}
+
+.card {
+    background: var(--card-bg-color);
+    backdrop-filter: blur(1rem);
+    border: none;
+    border-radius: 43.947px;
+    padding: 2.3rem;
+    font-family: Poppins-Medium;
+    min-height: normal;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-primary-color);
+    font-family: Poppins-Medium, sans-serif;
+    font-size: 1.2rem;
+    transition: all .5s;
+}
+
+.nav.nav-tabs {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--text-secondary-color);
+    background-color: transparent;
+    border: none;
+    transform: scale(1.5);
+    border: none !important;
+}
+
+.form-control {
+    background-color: var(--input-bg-color);
+    border: none;
+    color: var(--input-text-color);
+    border-radius: .5rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: none;
+}
+
+.btn-primary {
+    background: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    border: none;
+    border-radius: 11.64px;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    font-family: Poppins-Medium, sans-serif;
+    font-size: 1rem;
+    transition: all .5s;
+}
+
+.form-group {
+    margin-bottom: 0 !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--button-primary-hover-bg) !important;
+    transform: scaleX(1.1);
+}
+
+h2 {
+    font-family: Poppins-Medium, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary-color);
+}
+
+label {
+    font-family: Poppins-Medium, sans-serif;
+    color: var(--text-secondary-color);
+    margin-bottom: .25rem;
+}
+
+.translate {
+    @media screen and (min-width:768px) {
+        transform: translateY(-2.5rem);
+    }
+}
+
+.color-terms {
+    color: var(--terms-color);
+    transition: color ease .5s;
+}
+
+#register .translateradio {
+    transform: translateX(1.5rem);
+}
+
+.esqueciasenha {
+    float: right;
+    color: var(--esqueci-minha-senha-color);
+    text-decoration: none;
+    transition: color ease .5s;
+}
+
+.esqueciasenha:hover,
+.color-terms:hover {
+    color: var(--text-secondary-color);
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    border: none !important;
+}
+
+.nav-link:focus-visible,
+.nav-link:focus,
+.nav-link:focus-within,
+.nav-link.active:focus-visible,
+.nav-link.active:focus,
+.nav-link.active:focus-within,
+.nav-item:focus-visible,
+.nav-item:focus,
+.nav-item:focus-within {
+    border: none !important;
+    outline: none !important;
+}
+
+.form-check-input {
+    display: none;
+}
+
+.form-check-label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--checkmark-bg);
+    border-radius: 5px;
+}
+
+.form-check-input:checked+.form-check-label .checkmark {
+    background-color: var(--checkmark-checked-bg);
+}
+
+.form-check-input:checked+.form-check-label .checkmark:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--checkmark-border);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.btnLogin,
+.newAcount {
+    margin-top: 34%;
+    color: var(--button-primary-hover-bg) !important;
+}
+
+.formLogin {
+    margin-top: 4rem;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.icon {
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+}
+
+.close {
+    display: none;
+}
+
+.form-control:focus {
+    background-color: var(--input-bg-color);
+    outline: none;
+    color: var(--input-text-color);
+}
+
+.form-control:valid {
+    color: var(--input-text-color);
+    background-color: var(--input-bg-color);
+}
